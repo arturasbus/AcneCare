@@ -21,22 +21,38 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+/* Back to top button */
+#myBtn {
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    opacity: 0.7;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(189, 87, 87);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(199, 33, 33);
+    opacity: 1;
+  }
  
 /* Main container */
  .container-fluid{
-    transition: 1s cubic-bezier(.77, 0, .18, 1); 
     padding-top: 30px;
     z-index: -1;
  }
 
  /* Background */
-
- .background{   
-     background-size: cover;
-     background-position: 50%;
- }
-
  .background-image{
+        background-size: cover;
+        background-position: 50%;
         background-image: url('../img/bg/bg-image.png');
         bottom: 0;
         left: 0;
@@ -56,16 +72,12 @@ body {
     position: absolute;
     top: 0;
     left: 0;
- }
-
- .background-bubble img{
-   display: none;
-    
+    z-index: 2;
  }
 
 
   /* Bubbles */
- /* .bubble1{
+  .bubble11{
     background-image: url('../img/bg/11.png');
     position: fixed;
     background-repeat: no-repeat;
@@ -78,18 +90,48 @@ body {
     left: 0;
     opacity: 0.8;
     animation-name: scale;
-    animation-duration: 9s;
-    animation-iteration-count: infinite;
  }
- */
+
+ .bubble3{
+    background-image: url('../img/bg/3.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+ }
+
+ .bubble1{
+    background-image: url('../img/bg/1.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-duration: 11s;
+ }
+ 
 
  /* Animation */
 
  .moving{
     animation-name: moving;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
     opacity: 0.9;
  }
 
@@ -152,13 +194,11 @@ body {
  }
 
  #main h1{
-     font-size: 30px;
-     font-weight: 550;
+     font-size: 39px;
  }
 
  #main p{
-     font-weight: 600;
-     font-size: 14px;
+     font-size: 15px;
  }
 
  .showcase{
@@ -213,7 +253,7 @@ footer p{
 
 /* Side panel */
 .side{
-    font-family: Vanitas Stencil;
+    font-family: 'Vanitas Stencil';
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -237,7 +277,7 @@ footer p{
 
 .side h1{
     font-weight: 500;
-    font-size: 30px;
+    font-size: 40px;
     padding-top: 20px;
     padding-bottom: 10px;
 }
@@ -245,7 +285,7 @@ footer p{
 .side p{
     padding-top: 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
 }
 /* Side panel img */
@@ -256,7 +296,8 @@ footer p{
 
 .rowa::after{
     content: 'Prof. dr. Matilda Bylaitė-Bučinskienė';
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: bold;
     display: inline-block;
     padding-top: 40px;
 }
@@ -545,6 +586,10 @@ footer p{
         width: 120px;
     }
         /* Side panel contacts */
+    .findUs p{
+        font-weight: lighter;
+        font-size: 16px;
+    }
     .findUs{
         float: left;
         width: 50%;
@@ -657,6 +702,10 @@ footer p{
         width: 140px;
     }
         /* Side panel contacts */
+    .findUs p{
+        font-weight: lighter;
+        font-size: 16px;
+    }    
     .findUs{
         float: left;
         width: 50%;
@@ -766,19 +815,20 @@ footer p{
     }
 
     .side .rowa img{
-        float: left;
         height: 140px;
         width: 140px;
     }
         /* Side panel contacts */
     .findUs{
-        float: left;
         width: 50%;
+    }
+    .findUs p{
+        font-weight: lighter;
+        font-size: 16px;
     }
 
     /* Contact form */
     .contactForm{
-        float: right;
         width: 50%;  
     }
   } 
