@@ -1,18 +1,16 @@
 @font-face {
     font-family: 'Vanitas Stencil';
-    src: url("font/Vanitas-stencil.otf");
+    src: url('../fonts/Vanitas-stencil.otf');
   }
 
 @font-face {
     font-family: 'Funkis A';
-    src: url('fonts/Funkis-A-Regular.otf');
-    font-weight: 900;
-    font-size: 10px;
+    src: url('../fonts/Funkis A Regular.otf');
   }
 
 @font-face {
     font-family: 'Funkis A light';
-    src: url('font/Funkis-A-Light.otf');
+    src: url('../fonts/Funkis-A-Light.otf');
   }
 
 body {
@@ -443,6 +441,9 @@ footer p{
         font-size: 12px; 
         float: right;
     }
+    .side p{
+        font-size: 16px;
+    }
         /* Side panel img */
 
     .rowa::after{
@@ -525,6 +526,9 @@ footer p{
         font-family: 'Funkis A light';
         font-size: 12px; 
         float: right;
+    }
+    .side p{
+        font-size: 18px;
     }
         /* Side panel img */
 
@@ -632,9 +636,10 @@ footer p{
     }
      
     .side p{
-        font-size: 16px;
+        font-size: 18px;
     }
         /* Side panel img */
+
     .rowa{
         padding-bottom: 150px;
     }
